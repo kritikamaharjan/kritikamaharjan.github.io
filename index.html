@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kritika Maharjan - Software Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header / Hero Section */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        header .tagline {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .contact-links {
+            margin-top: 20px;
+        }
+
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            transition: opacity 0.3s;
+        }
+
+        .contact-links a:hover {
+            opacity: 0.7;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #764ba2;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 0;
+            background: white;
+            margin: 20px 0;
+        }
+
+        section:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #667eea;
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .skill-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .skill-card ul {
+            list-style: none;
+        }
+
+        .skill-card ul li {
+            padding: 5px 0;
+            color: #555;
+        }
+
+        .skill-card ul li:before {
+            content: "▹ ";
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .project-card .project-content {
+            padding: 25px;
+        }
+
+        .project-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .project-card .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tech-tag {
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+        }
+
+        /* Experience Section */
+        .experience-timeline {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .experience-item {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .experience-item h3 {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        .experience-item .company {
+            color: #764ba2;
+            font-weight: 600;
+            margin: 5px 0;
+        }
+
+        .experience-item .duration {
+            color: #888;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .experience-item ul {
+            margin-left: 20px;
+        }
+
+        .experience-item ul li {
+            margin: 8px 0;
+            color: #555;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-content p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #764ba2;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            section h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Kritika Maharjan</h1>
+            <p class="tagline">Software Engineer | Backend Developer | .NET Specialist</p>
+            <div class="contact-links">
+                <a href="mailto:kritika9775@gmail.com">✉ Email</a>
+                <a href="https://linkedin.com/in/kritikamaharjan" target="_blank">💼 LinkedIn</a>
+                <a href="tel:203-550-8262">📞 203-550-8262</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>I'm a Software Engineer with 5+ years of experience building scalable backend systems and data-driven applications. I specialize in C#, .NET, and SQL Server, with a strong focus on healthcare technology and HIPAA-compliant systems.</p>
+                <p>I'm passionate about clean code, database optimization, and mentoring junior developers. I thrive in collaborative environments where I can solve complex problems and deliver high-quality solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>C#</li>
+                        <li>VB.NET</li>
+                        <li>T-SQL</li>
+                        <li>JavaScript</li>
+                        <li>HTML5 & CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Frameworks</h3>
+                    <ul>
+                        <li>.NET Framework</li>
+                        <li>ASP.NET MVC</li>
+                        <li>ASP.NET Web API</li>
+                        <li>Entity Framework</li>
+                        <li>Blazor</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Databases & Tools</h3>
+                    <ul>
+                        <li>MS SQL Server</li>
+                        <li>ADO.NET</li>
+                        <li>Dapper</li>
+                        <li>REST APIs</li>
+                        <li>GitHub</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Specializations</h3>
+                    <ul>
+                        <li>Backend Development</li>
+                        <li>Database Optimization</li>
+                        <li>HIPAA Compliance</li>
+                        <li>EDI Processing</li>
+                        <li>Agile Methodologies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Healthcare Claims Processing System</h3>
+                        <p>Built HIPAA-compliant EDI transaction processing system handling 837, 835, and 277 transactions. Integrated with third-party payment systems via REST APIs.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">.NET</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">REST API</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Legacy System Modernization</h3>
+                        <p>Refactored legacy VB.NET codebase to modern C# standards, improving maintainability and reducing technical debt while maintaining backward compatibility.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">VB.NET</span>
+                            <span class="tech-tag">Refactoring</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>Designed and developed a responsive personal portfolio website from scratch to showcase projects and technical skills.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <h3>Software Engineer</h3>
+                    <p class="company">Cedar Gate Technologies (U.S.-based)</p>
+                    <p class="duration">August 2021 – February 2025</p>
+                    <ul>
+                        <li>Designed and maintained SQL Server database objects, optimizing query performance for healthcare processing systems</li>
+                        <li>Developed backend modules using C# and VB.NET, supporting mission-critical workflows processing thousands of healthcare claims</li>
+                        <li>Built HIPAA-compliant EDI transaction processing systems integrating with third-party payment systems</li>
+                        <li>Mentored 3 junior developers on clean code principles and .NET best practices</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Software Developer</h3>
+                    <p class="company">IMS Software</p>
+                    <p class="duration">August 2020 – July 2021</p>
+                    <ul>
+                        <li>Developed and maintained RESTful APIs using .NET and C# for business-critical applications</li>
+                        <li>Designed and optimized MS SQL Server databases with efficient queries and views</li>
+                        <li>Utilized Dapper ORM for lightweight data access achieving faster query execution</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Junior Developer</h3>
+                    <p class="company">NBIT</p>
+                    <p class="duration">May 2019 – November 2019</p>
+                    <ul>
+                        <li>Developed ASP.NET MVC applications using C# with clean architecture</li>
+                        <li>Built RESTful APIs with ASP.NET Web API for seamless integration</li>
+                        <li>Created dynamic, responsive frontend features using AngularJS and JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <p>I'm currently open to new opportunities and exciting projects. Feel free to reach out!</p>
+                <div class="contact-buttons">
+                    <a href="mailto:kritika9775@gmail.com" class="btn">Email Me</a>
+                    <a href="https://linkedin.com/in/kritikamaharjan" target="_blank" class="btn">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Kritika Maharjan. All rights reserved.</p>
+            <p>Stamford, CT | kritika9775@gmail.com</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Add scroll animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.skill-card, .project-card, .experience-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
