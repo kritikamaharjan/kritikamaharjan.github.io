@@ -20,8 +20,8 @@ body {
   margin-bottom: 15px;
 }
 .profile-photo {
-    width: 500px;       /* adjust size */
-    height: 500px;      /* adjust size */
+    width: 200px;       /* adjust size */
+    height: 200px;      /* adjust size */
     object-fit: cover;  /* ensures photo fits nicely */
     border-radius: 50%; /* makes it circular */
     border: 3px solid #fff; /* optional border */
