@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0a2540, #102a43);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 15px;
+}
+
+.tagline {
+  max-width: 700px;
+  margin: 10px auto 20px;
+}
+
+.buttons button {
+  margin: 10px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  background: #00c6ff;
+  color: #003;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background: #00a3d9;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #00c6ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.section {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.section h3 {
+  border-left: 5px solid #0a2540;
+  padding-left: 10px;
+}
+
+.skills span {
+  display: inline-block;
+  background: #e0e6ed;
+  padding: 8px 14px;
+  margin: 6px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.skill-group {
+  margin-top: 20px;
+}
+
+.skill-group h4 {
+  margin-bottom: 8px;
+  color: #0a2540;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+footer {
+  background: #0a2540;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
