@@ -1,184 +1,332 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kritika Maharjan | Software Engineer</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Kritika Maharjan | C#/.NET Software Engineer</title>
+
+  <meta name="description" content="Portfolio website of Kritika Maharjan, C#/.NET Software Engineer with experience in SQL Server, REST APIs, healthcare claims systems, EZ-CAP, capitation adjudication, HIPAA EDI, and production support." />
+  <meta name="author" content="Kritika Maharjan" />
+
+  <meta property="og:title" content="Kritika Maharjan | C#/.NET Software Engineer" />
+  <meta property="og:description" content="C#/.NET Software Engineer specializing in SQL Server, healthcare IT, claims processing, EZ-CAP, capitation adjudication, HIPAA EDI, and production support." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="#home" class="logo" aria-label="Kritika Maharjan home">KM</a>
 
-<header class="hero">
-  <img src="profile.jpg" alt="Kritika Maharjan" class="profile-photo">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-  <h1>Kritika Maharjan</h1>
-  <h2>Software Engineer | .NET Developer</h2>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#highlights">Highlights</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="buttons">
-    <button onclick="downloadResume()">Download Resume</button>
-    <button onclick="scrollToContact()">Contact Me</button>
-  </div>
-</header>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content reveal">
+        <div class="profile-wrapper">
+          <img src="profile.jpg" alt="Photo of Kritika Maharjan" class="profile-photo" />
+        </div>
 
-<section class="section">
-  <h3>About Me</h3>
-  <p>
-    I am a Software Engineer with 5+ years of experience designing and developing backend applications using C#, VB.NET, SQL Server, 
-    and the Microsoft technology stack. Strong expertise in building scalable APIs, optimizing SQL Server stored procedures, and 
-      developing data-driven systems. Experienced collaborating with technical and operational teams to analyze requirements and 
-      deliver robust, maintainable solutions. Skilled in refactoring legacy .NET applications, troubleshooting production issues, 
-      and integrating third-party services using REST APIs. Detail-oriented, analytical, and effective in fast-paced, on-site environments.
-  </p>
-</section>
+        <p class="eyebrow">Open to Remote, CT, and NYC Opportunities</p>
 
-<section class="section">
-  <h3>Technical Skills</h3>
+        <h1>Kritika Maharjan</h1>
 
-  <div class="skill-group">
-    <h4>Programming Languages</h4>
-    <div class="skills">
-      <span>VB.NET</span>
-      <span>C#</span>
-      <span>T-SQL</span>
-    </div>
-  </div>
+        <h2>C#/.NET Software Engineer | SQL Server | Healthcare IT</h2>
 
-  <div class="skill-group">
-    <h4>Web Development</h4>
-    <div class="skills">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>REST APIs</span>
-      <span>Blazor (Learning)</span>
-    </div>
-  </div>
+        <p class="hero-summary">
+          Software Engineer with 4.5 years of experience supporting, enhancing, and modernizing enterprise applications
+          using C#, VB.NET, .NET Framework, ASP.NET Web API, REST APIs, and SQL Server.
+        </p>
 
-  <div class="skill-group">
-    <h4>Frameworks & Libraries</h4>
-    <div class="skills">
-      <span>.NET Framework</span>
-    </div>
-  </div>
+        <div class="hero-buttons">
+          <a href="Kritika_Resume.pdf" download class="btn btn-primary" id="downloadResume">
+            Download Resume
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            Contact Me
+          </a>
+        </div>
 
-  <div class="skill-group">
-    <h4>Data Access</h4>
-    <div class="skills">
-      <span>ADO.NET</span>
-      <span>Dapper</span>
-    </div>
-  </div>
+        <div class="hero-facts">
+          <span>Stamford, CT</span>
+          <span>Authorized to work in the U.S.</span>
+          <span>No sponsorship required</span>
+        </div>
+      </div>
+    </section>
 
-  <div class="skill-group">
-    <h4>Database</h4>
-    <div class="skills">
-      <span>MS SQL Server</span>
-      <span>Stored Procedures</span>
-      <span>Views</span>
-      <span>Functions</span>
-    </div>
-  </div>
+    <section class="section" id="about">
+      <div class="section-heading reveal">
+        <p class="section-label">About</p>
+        <h3>Healthcare-focused .NET engineer with strong SQL and production support experience.</h3>
+      </div>
 
-  <div class="skill-group">
-    <h4>Reporting</h4>
-    <div class="skills">
-      <span>Crystal Reports</span>
-    </div>
-  </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I specialize in building, maintaining, and supporting business-critical healthcare technology applications.
+            My experience includes claims processing, capitation adjudication, payment workflows, provider data,
+            HIPAA EDI transactions, EZ-CAP, EZ-NET, EZ-EDI, and SQL Server-based reporting and operations.
+          </p>
 
-  <div class="skill-group">
-    <h4>Tools & Version Control</h4>
-    <div class="skills">
-      <span>GitHub</span>
-      <span>Bitbucket</span>
-      <span>CI/CD</span>
-      <span>Visual Studio</span>
-    </div>
-  </div>
+          <p>
+            I enjoy solving application and data issues, improving legacy systems, optimizing SQL Server stored procedures,
+            supporting deployments, documenting technical changes, and collaborating with business, QA, product, and engineering teams.
+          </p>
+        </div>
 
-  <div class="skill-group">
-    <h4>Methodologies</h4>
-    <div class="skills">
-      <span>Agile</span>
-    </div>
-  </div>
-</section>
+        <div class="quick-card reveal">
+          <h4>Core Focus</h4>
+          <ul>
+            <li>C# / VB.NET / .NET Framework</li>
+            <li>SQL Server, stored procedures, views, functions</li>
+            <li>Healthcare claims, capitation, and EDI workflows</li>
+            <li>Production support, debugging, and root-cause analysis</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
+    <section class="section" id="skills">
+      <div class="section-heading reveal">
+        <p class="section-label">Skills</p>
+        <h3>Technical skills aligned with .NET, SQL Server, healthcare IT, and application support roles.</h3>
+      </div>
 
-<section class="section">
-  <h3>Professional Experience</h3>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <h4>Languages</h4>
+          <div class="skills">
+            <span>C#</span>
+            <span>VB.NET</span>
+            <span>T-SQL</span>
+            <span>JavaScript</span>
+            <span>HTML</span>
+            <span>CSS</span>
+          </div>
+        </div>
 
-  <div class="card">
-    <h4>Software Engineer — Cedar Gate Technologies</h4>
-    <p>
-        <ul>
-            <li>Designed and maintained SQL Server database objects (stored procedures, functions, views) and implemented efficient data access using ADO.NET. </li>
-            <li>Developed and enhanced backend modules using VB.NET and C#, supporting mission-critical processing workflows.</li>
-            <li>Developed and maintained U.S. healthcare applications, processing HIPAA EDI transactions (837, 835, 277) for claims intake, adjudication, and reporting, including integration with third-party systems for claim payments.</li>
-            <li>Refactored legacy VB.NET code to improve performance, maintainability, and adherence to modern coding standards.</li>
-            <li>Built responsive web interfaces using HTML5, CSS, and JavaScript, enhancing user experience and cross-browser compatibility.</li>
-            <li>Gained hands-on experience with Blazor and APIs, developing interactive web applications and seamless client-server communication.</li>
-            <li>Worked with JSON and XML for data exchange and integration across internal and external systems.</li>
-            <li>Collaborated with operational and business teams to translate requirements into technical specifications.</li>
-            <li>Mentored junior developers on best practices, clean code techniques, and development workflows, fostering team productivity.</li>
-            <li>Performed unit testing, code reviews, and debugging, ensuring high-quality deliverables and adherence to project requirements.</li>
-            <li>Contributed to process improvements and documentation, optimizing software development lifecycle and knowledge sharing.</li>
-        </ul>
-    </p>
-  </div>
+        <div class="skill-card reveal">
+          <h4>Frameworks & APIs</h4>
+          <div class="skills">
+            <span>.NET Framework</span>
+            <span>.NET Core</span>
+            <span>ASP.NET MVC</span>
+            <span>ASP.NET Web API</span>
+            <span>REST APIs</span>
+            <span>Blazor Basic Exposure</span>
+          </div>
+        </div>
 
-  <div class="card">
-    <h4>Software Developer — IMS Software</h4>
-    <p>
-        <ul>
-            <li>Developed, tested, and maintained backend services and RESTful APIs using .NET and C# for business-critical applications.</li>
-            <li>Designed and optimized MS SQL Server databases, including queries, views.</li>
-            <li>Utilized Dapper ORM for efficient and lightweight data access in .NET applications, improving query performance and maintainability.</li>
-            <li>Refactored, debugged, and updated .NET/C# code to improve performance, reliability, and maintainability.</li>
-            <li>Worked closely with business and operations teams to translate complex requirements into scalable and well-defined technical specifications.</li>
-            <li>Implemented best practices, coding standards, and software delivery methodologies to ensure high-quality solutions.</li>
-            <li>Collaborated with cross-functional teams to design, deploy, and support scalable and reliable applications.</li>
-        </ul>
-    </p>
-  </div>
-    <div class="card">
-    <h4>Junior Developer — NBIT</h4>
-    <p>
-        <ul>
-            <li>Developed and maintained ASP.NET MVC applications using C#, delivering scalable and maintainable web solutions.</li>
-            <li>Connected applications to Microsoft SQL Server using Entity Framework, implementing queries, stored procedures, and efficient data access patterns.</li>
-            <li>Built RESTful APIs with ASP.NET Web API to support frontend applications and integrations.</li>
-            <li>Created dynamic frontend features with Angular JS and JavaScript, integrating with backend services for responsive user experiences.</li>
-            <li>Collaborated with cross-functional teams to optimize performance, and deliver reliable software solutions.</li>
-        </ul>
-    </p>
-  </div>
-</section>
+        <div class="skill-card reveal">
+          <h4>Database & Data Access</h4>
+          <div class="skills">
+            <span>MS SQL Server</span>
+            <span>Stored Procedures</span>
+            <span>Views</span>
+            <span>Functions</span>
+            <span>ADO.NET</span>
+            <span>Dapper</span>
+            <span>Entity Framework</span>
+          </div>
+        </div>
 
-<section class="section">
-  <h3>Key Projects</h3>
-  <ul>
-    <li>Healthcare Claims Processing System (EDI 837 / 835 / 277)</li>
-    <li>Legacy VB.NET to Modern C# Migration</li>
-    <li>High-Performance REST API Services</li>
-  </ul>
-</section>
+        <div class="skill-card reveal">
+          <h4>Healthcare IT</h4>
+          <div class="skills">
+            <span>EZ-CAP</span>
+            <span>EZ-NET</span>
+            <span>EZ-EDI</span>
+            <span>Claims Processing</span>
+            <span>Capitation Adjudication</span>
+            <span>Payment Workflows</span>
+            <span>Provider Data</span>
+            <span>HIPAA EDI 837/835/277</span>
+          </div>
+        </div>
 
-<section class="section contact" id="contact">
-  <h3>Contact</h3>
-  <div class="social-links">
-    <a href="https://linkedin.com/in/kritikamaharjan" target="_blank">LinkedIn</a>
-    <a href="https://github.com/kritikamaharjan" target="_blank">GitHub</a>
-    <a href="https://www.facebook.com/krtka3">Facebook</a>
-    <a href="https://www.instagram.com/k_r_t_k_a/">Instagram</a>
-    <a href="mailto:kritika9775@gmail.com">Email</a>
-  </div>
-</section>
+        <div class="skill-card reveal">
+          <h4>Tools & Technologies</h4>
+          <div class="skills">
+            <span>JSON</span>
+            <span>XML</span>
+            <span>Crystal Reports</span>
+            <span>Visual Studio</span>
+            <span>GitHub</span>
+            <span>Bitbucket</span>
+            <span>Jira</span>
+            <span>CI/CD</span>
+            <span>Azure Fundamentals</span>
+            <span>AWS Basic Exposure</span>
+          </div>
+        </div>
 
-<footer>
-  <p>© 2026 Kritika Maharjan | Software Engineer</p>
-</footer>
+        <div class="skill-card reveal">
+          <h4>Strengths</h4>
+          <div class="skills">
+            <span>Production Support</span>
+            <span>SQL Optimization</span>
+            <span>Data Validation</span>
+            <span>Root-Cause Analysis</span>
+            <span>Application Refactoring</span>
+            <span>Legacy Modernization</span>
+            <span>Technical Documentation</span>
+            <span>Code Reviews</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<script src="script.js"></script>
+    <section class="section" id="experience">
+      <div class="section-heading reveal">
+        <p class="section-label">Experience</p>
+        <h3>Professional experience supporting enterprise applications and healthcare technology systems.</h3>
+      </div>
+
+      <div class="timeline">
+        <article class="experience-card reveal">
+          <div class="experience-header">
+            <div>
+              <h4>Software Engineer</h4>
+              <p>Cedar Gate Technologies</p>
+            </div>
+            <span>Aug 2021 – Feb 2025</span>
+          </div>
+
+          <ul>
+            <li>Supported, enhanced, and maintained enterprise healthcare applications built with C#, VB.NET, .NET Framework, Web API, and SQL Server.</li>
+            <li>Worked on claims, payment, adjudication, capitation, reporting, provider data, and healthcare processing workflows.</li>
+            <li>Designed and maintained SQL Server stored procedures, functions, views, and queries to improve performance and data integrity.</li>
+            <li>Built and supported HIPAA-compliant EDI transaction processing systems including 837, 835, and 277.</li>
+            <li>Troubleshot production defects, SQL performance issues, data discrepancies, application errors, and workflow failures.</li>
+            <li>Refactored legacy VB.NET code and enhanced .NET components to reduce technical debt and support modernization.</li>
+            <li>Collaborated with operations, QA, business analysts, product stakeholders, and developers to deliver reliable technical solutions.</li>
+            <li>Supported deployments, documented technical changes, contributed to code reviews, and mentored junior developers.</li>
+          </ul>
+        </article>
+
+        <article class="experience-card reveal">
+          <div class="experience-header">
+            <div>
+              <h4>Software Developer</h4>
+              <p>IMS Software</p>
+            </div>
+            <span>Aug 2020 – Jul 2021</span>
+          </div>
+
+          <ul>
+            <li>Developed and maintained RESTful APIs, ASP.NET MVC applications, and backend services using C#, .NET, Web API, and SQL Server.</li>
+            <li>Designed and optimized SQL Server databases, queries, views, stored procedures, and data access layers.</li>
+            <li>Used Dapper, Entity Framework, and ADO.NET for reliable and efficient data access.</li>
+            <li>Applied coding standards, SOLID principles, clean architecture, and separation of concerns to improve maintainability.</li>
+            <li>Built frontend features using AngularJS, JavaScript, HTML, and CSS while collaborating with business and cross-functional teams.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="highlights">
+      <div class="section-heading reveal">
+        <p class="section-label">Work Highlights</p>
+        <h3>Selected areas where I bring strong practical experience.</h3>
+      </div>
+
+      <div class="highlights-grid">
+        <article class="highlight-card reveal">
+          <h4>Healthcare Claims & EDI</h4>
+          <p>
+            Supported healthcare workflows involving claims intake, adjudication, payment, reporting,
+            and HIPAA EDI transactions including 837, 835, and 277.
+          </p>
+        </article>
+
+        <article class="highlight-card reveal">
+          <h4>EZ-CAP / EZ-NET / EZ-EDI</h4>
+          <p>
+            Enhanced and supported healthcare payer systems involving claims, capitation adjudication,
+            provider data, payment workflows, and operational reporting.
+          </p>
+        </article>
+
+        <article class="highlight-card reveal">
+          <h4>SQL Server Optimization</h4>
+          <p>
+            Designed, maintained, and optimized stored procedures, views, functions, and queries
+            to support reporting, validation, and high-volume workflows.
+          </p>
+        </article>
+
+        <article class="highlight-card reveal">
+          <h4>Legacy .NET Modernization</h4>
+          <p>
+            Refactored legacy VB.NET components and enhanced .NET modules to improve reliability,
+            maintainability, performance, and long-term supportability.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section education-section" id="education">
+      <div class="section-heading reveal">
+        <p class="section-label">Education</p>
+        <h3>Academic background.</h3>
+      </div>
+
+      <div class="education-card reveal">
+        <h4>Bachelor of Computer Engineering</h4>
+        <p>Pokhara University | Graduated 2018</p>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="section-heading reveal">
+        <p class="section-label">Contact</p>
+        <h3>Let’s connect for .NET, SQL Server, Application Support, or Healthcare IT opportunities.</h3>
+      </div>
+
+      <div class="contact-card reveal">
+        <p>
+          Based in Stamford, CT. Open to remote roles and opportunities in Connecticut and New York City.
+          Authorized to work in the U.S. with no sponsorship required.
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:kritika9775@gmail.com" class="contact-link">Email</a>
+          <a href="https://www.linkedin.com/in/kritikamaharjan/" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn</a>
+          <a href="https://github.com/kritikamaharjan" target="_blank" rel="noopener noreferrer" class="contact-link">GitHub</a>
+          <button class="contact-link button-link" id="copyEmail" type="button">Copy Email</button>
+        </div>
+
+        <p class="copy-message" id="copyMessage" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">↑</button>
+
+  <footer>
+    <p>© <span id="currentYear"></span> Kritika Maharjan | C#/.NET Software Engineer</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
+```
