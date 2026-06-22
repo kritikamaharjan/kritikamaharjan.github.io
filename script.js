@@ -2,10 +2,8 @@ document.documentElement.classList.remove("no-js");
 document.documentElement.classList.add("js-enabled");
 
 document.addEventListener("DOMContentLoaded", () => {
-  const resumeFileName = "Kritika_Resume.pdf";
   const emailAddress = "kritika9775@gmail.com";
 
-  const downloadResume = document.getElementById("downloadResume");
   const navToggle = document.getElementById("navToggle");
   const navLinks = document.getElementById("navLinks");
   const copyEmail = document.getElementById("copyEmail");
@@ -15,13 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (currentYear) {
     currentYear.textContent = new Date().getFullYear();
-  }
-
-  if (downloadResume) {
-    downloadResume.addEventListener("click", () => {
-      downloadResume.setAttribute("href", resumeFileName);
-      downloadResume.setAttribute("download", resumeFileName);
-    });
   }
 
   if (navToggle && navLinks) {
@@ -116,4 +107,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-```
