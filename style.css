@@ -487,6 +487,15 @@ a {
   color: white;
   border-color: var(--primary);
 }
+.contact-location {
+  margin-bottom: 6px;
+}
+
+.contact-auth {
+  margin-top: 0;
+  font-weight: 700;
+  color: var(--primary);
+}
 
 .button-link {
   appearance: none;
